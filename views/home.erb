@@ -1,5 +1,9 @@
+<% unless @number.nil? %>
+  <p>We are using <%= @number %> stored in memory.</p>
+<% end %>
+
 <form method="post" action="/calculate">
-  <input type="number" name="number1">
+  <input type="number" name="number1" value="<%= @number %>">
   <input type="number" name="number2">
 
   <button name="operation" value="add" type="submit">

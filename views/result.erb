@@ -1,2 +1,7 @@
 <p>When you <%= @op %> <%= @a %> and <%= @b %>, you get:</p>
 <h2><%= @result %></h2>
+
+<form method="post" action="/save">
+  <button>Save</button>
+  <input type="hidden" name="value" value="<%= @result %>">
+</form>
